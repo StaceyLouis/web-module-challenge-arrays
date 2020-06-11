@@ -116,10 +116,16 @@ Hint: You can use .splice() for this
 */
 
 function removeFlavorByName(arr, flavName){
-
-
+for(i = 0; i < arr.length; i++){
+    if(arr[i] === flavName) {
+    arr.splice(i, 1);
+}
+}
+ console.log(arr);
 
 }
+
+removeFlavorByName(originalFlavors, 'Vanilla');
 
 
 /* Task 6: With all of these changes going on, we don't want to lose track of the actual, original 31 flavors. Write a function called copy that makes a copy of the array. 
@@ -161,7 +167,7 @@ function filterByWord(arr, str){
          filtArr.push(arr[i])
      }
  }
-return filtArr;
+return filtArr; 
 }
 console.log(filterByWord(originalFlavors,'Chocolate'));
 
